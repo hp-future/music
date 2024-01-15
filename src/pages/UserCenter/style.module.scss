@@ -1,0 +1,30 @@
+.UserCenterClassName {
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+
+  .header {
+    display: flex;
+    column-gap: 15px;
+
+    .main {
+      flex: 1 0 0;
+      font-size: 12px;
+
+      .followeds {
+        min-width: 80px;
+        background-color: #fff;
+        text-align: center;
+        color: #999;
+        cursor: pointer;
+
+        &:hover {
+          color: #333;
+          & > div:first-child {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

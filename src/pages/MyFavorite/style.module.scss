@@ -1,0 +1,14 @@
+.myFavor {
+  height: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  overflow: auto;
+
+  :global {
+    .ant-tabs,
+    .ant-tabs-content,
+    .ant-tabs-tabpane {
+      height: 100%;
+    }
+  }
+}

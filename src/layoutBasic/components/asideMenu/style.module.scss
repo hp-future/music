@@ -1,0 +1,45 @@
+.AsideMenuClassName {
+  width: 200px;
+  height: 100%;
+  flex-shrink: 0;
+  background-color: #eeeeee57;
+  padding: 10px 3px 10px 10px;
+  box-sizing: border-box;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+
+      &.menuItem {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 8px;
+        border-radius: 4px;
+      }
+
+      &[data-active='true'] {
+        background-color: #eee;
+        font-weight: bold;
+      }
+      &[data-active-sub='true'] {
+        background-color: #eee;
+      }
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+
+  .subTitle {
+    font-size: 12px;
+    padding-left: 8px;
+    box-sizing: border-box;
+    color: #999;
+    margin: 10px 0;
+  }
+}

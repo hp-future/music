@@ -1,0 +1,11 @@
+.LoginClassName {
+  .userName {
+    margin-left: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #ffdddc;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.LayoutBasicClassName {
+  height: 100vh;
+
+  .LayoutBasicMain {
+    height: calc(100% - 40px - 70px);
+    display: flex;
+
+    .LayoutBasicMainContent {
+      flex: 1 0 0;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}

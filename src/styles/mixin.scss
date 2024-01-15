@@ -1,0 +1,13 @@
+@mixin scroll {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #d9d9d9;
+  }
+}

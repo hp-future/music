@@ -1,0 +1,15 @@
+@import './mixin.scss';
+
+:global {
+  .ant-tabs-top > .ant-tabs-nav::before {
+    border-bottom: none;
+  }
+  .ant-tabs-content,
+  .ant-tabs-tabpane {
+    height: 100%;
+  }
+
+  .ant-tooltip-inner {
+    @include scroll;
+  }
+}

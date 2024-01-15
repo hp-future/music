@@ -1,0 +1,28 @@
+.HeaderBarClassName {
+  height: 40px;
+  background-color: var(--music-color);
+  display: flex;
+  align-items: center;
+
+  .left {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+
+  .right {
+    flex: 1 0 0;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+
+    .OperateBarClassName {
+      display: flex;
+      column-gap: 15px;
+    }
+  }
+}

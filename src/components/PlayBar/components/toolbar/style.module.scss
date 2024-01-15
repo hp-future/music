@@ -1,0 +1,42 @@
+.toolbar {
+  flex: 1 0 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0 24px;
+  column-gap: 15px;
+
+  .sound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.soundPopover {
+  :global {
+    .ant-popover-inner-content {
+      height: 100%;
+    }
+    .ant-slider:hover .ant-slider-handle::after {
+      box-shadow: 0 0 0 2px var(--music-color);
+    }
+  }
+}
+
+.playlistContent {
+  height: 100%;
+
+  .header {
+    height: 100px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+      margin: 0;
+    }
+  }
+}

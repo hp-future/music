@@ -1,0 +1,124 @@
+.MusicDetailClassName {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 100;
+  transition: top 0.2s, bottom 0s 0.2s;
+  background-image: linear-gradient(#d6d1d5, #fff 30%, #fff);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.show {
+    top: 0%;
+    bottom: 70px;
+    transition: top 0.2s;
+  }
+
+  .header {
+    height: 40px;
+    display: flex;
+    .left {
+      width: 200px;
+      flex-shrink: 0;
+      height: 100%;
+      padding-left: 18px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .content {
+    min-height: calc(100% - 40px);
+    max-width: 900px;
+    margin: 0 auto;
+
+    .lyricContent {
+      flex: 1 0 0;
+      height: 400px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .lyricItem {
+        white-space: pre-line;
+        text-align: center;
+        line-height: 28px;
+        cursor: pointer;
+        border-bottom: 1px dashed transparent;
+        box-sizing: border-box;
+
+        &:hover {
+          border-bottom-color: #eee;
+          position: relative;
+          &::before {
+            content: attr(data-time);
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+          }
+        }
+      }
+    }
+
+    .comment {
+      min-height: calc(100% - 400px);
+      padding-top: 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+
+      .toolbar {
+        margin-bottom: 15px;
+        display: flex;
+        gap: 8px;
+
+        :global {
+          .ant-btn {
+            color: #ffffff96;
+            font-weight: bold;
+            &:hover {
+              color: #ffffff96;
+            }
+
+            &.is-active {
+              color: var(--music-color);
+              &:hover {
+                color: var(--music-color);
+              }
+            }
+          }
+        }
+      }
+
+      .commentContent {
+        flex: 1 0 0;
+
+        .commentItem {
+          margin-bottom: 16px;
+          .user {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img {
+              border-radius: 50%;
+            }
+          }
+
+          .content {
+            margin-top: 4px;
+            padding-left: 38px;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+}

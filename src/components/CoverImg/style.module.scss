@@ -1,0 +1,22 @@
+.CoverImgClassName {
+  width: min-content;
+  overflow: hidden;
+
+  .imgbox {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .playCount {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .imgBoxClassName {
+      overflow: hidden;
+    }
+  }
+}

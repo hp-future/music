@@ -1,0 +1,9 @@
+.DiscoverMusicClassName {
+  height: 100%;
+
+  :global {
+    .ant-tabs-nav {
+      padding: 0 24px;
+    }
+  }
+}

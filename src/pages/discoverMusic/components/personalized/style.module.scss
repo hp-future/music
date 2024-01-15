@@ -1,0 +1,102 @@
+@import 'src/styles/mixin.scss';
+
+.PersonalizedClassName {
+  height: 100%;
+  padding: 0 24px;
+  overflow: auto;
+  @include scroll;
+
+  .bannerItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .imgbox {
+      position: relative;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .typeTitle {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: var(--music-color);
+        color: #fff;
+        padding: 0 8px;
+        border-top-left-radius: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  :global {
+    .slick-dots {
+      bottom: -12px;
+
+      li button {
+        background-color: #ccc;
+      }
+      li.slick-active button {
+        background-color: var(--music-color);
+      }
+    }
+  }
+
+  .playList {
+    margin-top: 20px;
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      .contentItem {
+        flex-shrink: 0;
+
+        .imgBox:hover {
+          .playBtn {
+            opacity: 1;
+          }
+        }
+
+        .playBtn {
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.5s;
+
+          .playBtnInner {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .personalizedMv {
+    margin-top: 20px;
+
+    .mvContent {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      .contentItem {
+        flex-shrink: 0;
+      }
+    }
+  }
+}

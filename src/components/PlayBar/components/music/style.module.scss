@@ -1,0 +1,70 @@
+.musicClassName {
+  flex: 1 0 0;
+  height: 100%;
+  padding: 0 24px;
+  overflow: hidden;
+
+  .imgbox {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateY(-70px);
+    transition: transform 0.2s;
+
+    .imgBoxClassName {
+      .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 40px;
+        background-color: #ffffff36;
+        display: none;
+        cursor: pointer;
+        color: #fafafa;
+      }
+
+      &:hover {
+        img {
+          filter: blur(1px);
+        }
+        .mask {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .detail {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    transform: translateY(-70px);
+    transition: transform 0.3s;
+
+    .btn {
+      padding: 10px;
+      border: 1px solid #eee;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      color: #747474;
+      &:hover {
+        background-color: #eeeeee70;
+      }
+    }
+  }
+
+  &.showDetail {
+    .imgbox {
+      transform: translateY(0px);
+    }
+    .detail {
+      transform: translateY(0px);
+    }
+  }
+}

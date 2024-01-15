@@ -1,0 +1,10 @@
+.ContentWrapperClassName {
+  box-sizing: border-box;
+
+  @media only screen and (min-width: 1600px) {
+    & {
+      width: 1300px;
+      margin: 0 auto;
+    }
+  }
+}
